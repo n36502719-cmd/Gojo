@@ -648,4 +648,17 @@ export function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
-export default botConfig;
+export default botConfig;  @bot.command()
+async def bump(ctx):
+    print('Auto bump started')
+
+    async def sendMsg(msg):
+        async with ctx.typing():
+            await asyncio.sleep(randint(3, 7))
+        await ctx.send(msg)
+
+    while True:
+        await sendMsg(config.disboard_prefix + " bump")
+        sleep(int(config.wait_time))
+
+bot.run(config.token, bot=False)
