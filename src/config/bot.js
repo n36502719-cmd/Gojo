@@ -649,4 +649,4 @@ export function getRandomColor() {
 }
 
 export default botConfig;
-**Server Configuration & Booster Records:** Mappings for Nitro Booster custom roles (`userId`, `roleId`), giveaway entries, and server channel configuration settings.
+
